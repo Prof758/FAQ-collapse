@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
 
 * {
   box-sizing: border-box;
@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Muli', sans-serif;
   color: #113f67;
   display: flex;
   flex-direction: column;
@@ -16,6 +16,58 @@ body {
   overflow: hidden;
   background-color: #e7eaf6;
   margin: 0;
+}
+
+.faq-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.faq {
+  margin: 20px 0;
+  border: 1px solid #113f6787;
+  border-radius: 8px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.faq.active {
+  background-color: #fff;
+  box-shadow: 0 3px 6px #4142448d, 0 3px 6px #4142448d;
+}
+
+.faq-title {
+  margin: 0 30px 0 0;
+}
+
+.faq-text {
+  display: none;
+  margin: 30px 0 0;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.faq.active::before,
+.faq.active::after {
+  content: '\f075';
+  font-family: 'Font Awesome 5 Free';
+  color: #62f7c5;
+  font-size: 7rem;
+  opacity: 0.3;
+  z-index: 0;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.faq.active::before {
+  top: -20px;
+  left: 70px;
+  color: #1e69e9;
 }
 
 .container {
